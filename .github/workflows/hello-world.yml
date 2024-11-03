@@ -1,0 +1,53 @@
+name: build-test-deploy
+on: push
+jobs: 
+  build:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: checkout repo
+        uses: actions/checkout@v3
+      - name: use node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+      - run: npm install
+      - run: npm run build 
+  test: 
+    needs: build
+    runs-on: ubuntu-latest
+    steps: 
+      - name: checkout repo
+        uses: actions/checkout@v3
+      - name: use node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+      - run: npm install
+      - run: npm test
+
+text: Twinkle Twinkle, Little Star
+How I wonder what you are
+Up above the world so high
+Like a diamond in the sky
+Twinkle Twinkle Little Star
+How I wonder what you are!
+Twinkle Twinkle, Little Star
+How I wonder what you are
+Up above the world so high
+Like a diamond in the sky
+Twinkle Twinkle Little Star
+How I wonder what you are
+
+span: nth-child(1){
+    color: green
+}
+span: nth-child(5){
+    color: red
+}
+span: nth-child(7){
+    color: pink
+}
+
+span: nth-child(12){
+    color: blue
+}
