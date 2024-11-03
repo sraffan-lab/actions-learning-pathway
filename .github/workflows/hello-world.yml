@@ -27,15 +27,15 @@ jobs:
 
 text: Twinkle Twinkle, Little Star How I wonder what you are Up above the world so high Like a diamond in the sky Twinkle Twinkle Little Star How I wonder what you are! Twinkle Twinkle, Little Star How I wonder what you are Up above the world so high Like a diamond in the sky Twinkle Twinkle Little Star How I wonder what you are
 span: nth-child(1){
-    color: green
+color: green
 }
 span: nth-child(5){
-    color: red
+- color: red
 }
 span: nth-child(7){
-    color: pink
+- color: pink
 }
 
 span: nth-child(12){
-    color: blue
+- color: blue
 }
